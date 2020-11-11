@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 100vh;
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+h1 {
+     color: white;
+     font-size: 50px;
+     letter-spacing: 3px;
+}
+.btn {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    width: 150px;
+    height: 30px;
+    display: flex;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: space-around;
+    border: none;
+    transition: 0.3s linear;
+}
+
+.btn span {
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+.switch {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: pink;
+    margin: 0;
+    border-radius: 4px;
+    display: block;
+    transition: 0.3s linear;
+}
+.slide .switch {
+    left: 50%;
+}
+/* Add overlay to the video */
+
+header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: -1;
+}
